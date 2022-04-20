@@ -878,3 +878,10 @@ for i,v in pairs(cors) do
 		pcall(v)
 	end)
 end
+
+Model0.Torso.Anchored = true
+Model0.Archivable = true
+Model0:Clone()
+Model0:Clone()
+Model0:Clone()
+wait(3)
