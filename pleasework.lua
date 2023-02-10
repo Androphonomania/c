@@ -148,7 +148,7 @@ function pointToMouse(mouse2)
 	local block = Instance.new("Part", rune)
 	block.Anchored = true
 	block.CanCollide = false
-	block.BrickColor = BrickColor.new("Baby blue")
+	block.Color = Color3.fromHex("0x5555ff")
 	block.Material = Enum.Material.Neon
 	block.Transparency = 0
 	block.CFrame = CFrame.new(model:FindFirstChild("Head").Position:Lerp(point, 0.5), point)
@@ -200,7 +200,7 @@ function go()
 	crux.Position = owner.Character.Crucifix.Handle.Position
 	local light = Instance.new("PointLight")
 	light.Parent = crux
-	light.Color = Color3.new(0,1,1)
+	light.Color = Color3.fromHex("0x5555ff")
 	light.Range = 0
 	light.Brightness = 20
 	owner.Character.Crucifix:Destroy()
@@ -229,13 +229,13 @@ function go()
 		until b <= 0
 	]], crux)
 	delay(1,function()
-		local tween = TweenService:Create(crux, tweenInfohhUHHHHHHHHHHHHHUAAHAUAHA, {Color = Color3.new(0,1,1)})
+		local tween = TweenService:Create(crux, tweenInfohhUHHHHHHHHHHHHHUAAHAUAHA, {Color = Color3.fromHex("0x5555ff")})
 		tween:Play()
 	end)
 	delay(3,function()
 		local tween = TweenService:Create(light, tweenInfoGuh, {Range = 20})
 		tween:Play()
-		local tween = TweenService:Create(crux, tweenInfoGuh, {Color = Color3.new(0,1,1)})
+		local tween = TweenService:Create(crux, tweenInfoGuh, {Color = Color3.fromHex("0x5555ff")})
 		tween:Play()
 	end)
 	delay(6,function()
@@ -370,7 +370,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			runeDecal.Texture = "http://www.roblox.com/asset/?id=2553177155"
 			runeDecal.Face = Enum.NormalId.Top
 			runeDecal.Transparency = 1
-			runeDecal.Color3 = Color3.new(0,1,1)
+			runeDecal.Color3 = Color3.fromHex("0x5555ff")
 			runeLight.Parent = rune
 			runeLight.Color = Color3.new(1,1,1)
 			runeLight.Range = 12
@@ -423,7 +423,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			runeDecal.Face = Enum.NormalId.Top
 			runeDecal.Transparency = 0
 			runeLight.Parent = rune
-			runeLight.Color = Color3.new(0,1,1)
+			runeLight.Color = Color3.fromHex("0x5555ff")
 			runeLight.Range = 12
 			runeLight.Brightness = 10
 			
@@ -607,9 +607,75 @@ event.OnServerEvent:Connect(function(player, hit)
 			runeDecal.Face = Enum.NormalId.Top
 			runeDecal.Transparency = 0
 			runeLight.Parent = rune
-			runeLight.Color = Color3.new(0,1,1)
+			runeLight.Color = Color3.fromHex("0x5555ff")
 			runeLight.Range = 12
 			runeLight.Brightness = 10
+			
+			local Attatchment0 = Instance.new("Attachment")
+			Attatchment0.Parent = rune
+			Attatchment0.Position = Vector3.new(rune.Size.X*0.325, 0, 0)
+			local Attatchment1 = Instance.new("Attachment")
+			Attatchment1.Parent = rune
+			Attatchment1.Position = Vector3.new(-rune.Size.X*0.325, 0, 0)
+			local Attatchment2 = Instance.new("Attachment")
+			Attatchment2.Parent = rune
+			Attatchment2.Position = Vector3.new(0, 0, rune.Size.Z*0.325)
+			local Attatchment3 = Instance.new("Attachment")
+			Attatchment3.Parent = rune
+			Attatchment3.Position = Vector3.new(0, 0, -rune.Size.Z*0.325)
+
+			local funny = Instance.new("Attachment")
+			funny.Parent = what
+
+			local Beam0 = Instance.new("Beam")
+			Beam0.Parent = rune
+			Beam0.Attachment0 = Attatchment0
+			Beam0.Attachment1 = funny
+			Beam0.FaceCamera = true
+			Beam0.LightInfluence = 1
+			Beam0.Segments = 1
+			Beam0.Texture = "http://www.roblox.com/asset/?id=11277721641"
+			Beam0.TextureLength = 2
+			Beam0.Transparency = NumberSequence.new(0,0)
+			Beam0.Width0 = 5
+			Beam0.Width1 = 5
+			local Beam1 = Instance.new("Beam")
+			Beam1.Parent = rune
+			Beam1.Attachment0 = Attatchment1
+			Beam1.Attachment1 = funny
+			Beam1.FaceCamera = true
+			Beam1.LightInfluence = 1
+			Beam1.Segments = 1
+			Beam1.Texture = "http://www.roblox.com/asset/?id=11277721641"
+			Beam1.TextureLength = 2
+			Beam1.Transparency = NumberSequence.new(0,0)
+			Beam1.Width0 = 5
+			Beam1.Width1 = 5
+			local Beam2 = Instance.new("Beam")
+			Beam2.Parent = rune
+			Beam2.Attachment0 = Attatchment2
+			Beam2.Attachment1 = funny
+			Beam2.FaceCamera = true
+			Beam2.LightInfluence = 1
+			Beam2.Segments = 1
+			Beam2.Texture = "http://www.roblox.com/asset/?id=11277721641"
+			Beam2.TextureLength = 2
+			Beam2.Transparency = NumberSequence.new(0,0)
+			Beam2.Width0 = 5
+			Beam2.Width1 = 5
+			local Beam3 = Instance.new("Beam")
+			Beam3.Parent = rune
+			Beam3.Attachment0 = Attatchment3
+			Beam3.Attachment1 = funny
+			Beam3.FaceCamera = true
+			Beam3.LightInfluence = 1
+			Beam3.Segments = 1
+			Beam3.Texture = "http://www.roblox.com/asset/?id=11277721641"
+			Beam3.TextureLength = 2
+			Beam3.Transparency = NumberSequence.new(0,0)
+			Beam3.Width0 = 5
+			Beam3.Width1 = 5
+			
 			go()
 			wait(1)
 			for i,v in ipairs(model:GetDescendants()) do
