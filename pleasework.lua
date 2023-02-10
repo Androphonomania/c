@@ -148,7 +148,7 @@ function pointToMouse(mouse2)
 	local block = Instance.new("Part", rune)
 	block.Anchored = true
 	block.CanCollide = false
-	block.Color = Color3.fromHex("5555ff")
+	block.BrickColor = BrickColor.new("Baby blue")
 	block.Material = Enum.Material.Neon
 	block.Transparency = 0
 	block.CFrame = CFrame.new(model:FindFirstChild("Head").Position:Lerp(point, 0.5), point)
@@ -200,7 +200,7 @@ function go()
 	crux.Position = owner.Character.Crucifix.Handle.Position
 	local light = Instance.new("PointLight")
 	light.Parent = crux
-	light.Color = Color3.fromHex("5555ff")
+	light.Color = Color3.new(0,1,1)
 	light.Range = 0
 	light.Brightness = 20
 	owner.Character.Crucifix:Destroy()
@@ -229,13 +229,13 @@ function go()
 		until b <= 0
 	]], crux)
 	delay(1,function()
-		local tween = TweenService:Create(crux, tweenInfohhUHHHHHHHHHHHHHUAAHAUAHA, {Color = Color3.fromHex("5555ff")})
+		local tween = TweenService:Create(crux, tweenInfohhUHHHHHHHHHHHHHUAAHAUAHA, {Color = Color3.new(0,1,1)})
 		tween:Play()
 	end)
 	delay(3,function()
 		local tween = TweenService:Create(light, tweenInfoGuh, {Range = 20})
 		tween:Play()
-		local tween = TweenService:Create(crux, tweenInfoGuh, {Color = Color3.fromHex("5555ff")})
+		local tween = TweenService:Create(crux, tweenInfoGuh, {Color = Color3.new(0,1,1)})
 		tween:Play()
 	end)
 	delay(6,function()
@@ -370,7 +370,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			runeDecal.Texture = "http://www.roblox.com/asset/?id=2553177155"
 			runeDecal.Face = Enum.NormalId.Top
 			runeDecal.Transparency = 1
-			runeDecal.Color3 = Color3.fromHex("5555ff")
+			runeDecal.Color3 = Color3.new(0,1,1)
 			runeLight.Parent = rune
 			runeLight.Color = Color3.new(1,1,1)
 			runeLight.Range = 12
@@ -423,7 +423,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			runeDecal.Face = Enum.NormalId.Top
 			runeDecal.Transparency = 0
 			runeLight.Parent = rune
-			runeLight.Color = Color3.fromHex("5555ff")
+			runeLight.Color = Color3.new(0,1,1)
 			runeLight.Range = 12
 			runeLight.Brightness = 10
 			
@@ -607,7 +607,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			runeDecal.Face = Enum.NormalId.Top
 			runeDecal.Transparency = 0
 			runeLight.Parent = rune
-			runeLight.Color = Color3.fromHex("5555ff")
+			runeLight.Color = Color3.new(0,1,1)
 			runeLight.Range = 12
 			runeLight.Brightness = 10
 			
