@@ -451,7 +451,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			Beam0.LightInfluence = 1
 			Beam0.Segments = 1
 			Beam0.Texture = "http://www.roblox.com/asset/?id=11277721641"
-			Beam0.TextureLength = -1
+			Beam0.TextureLength = 2
 			Beam0.Transparency = NumberSequence.new(0,0)
 			Beam0.Width0 = 5
 			Beam0.Width1 = 5
@@ -463,7 +463,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			Beam1.LightInfluence = 1
 			Beam1.Segments = 1
 			Beam1.Texture = "http://www.roblox.com/asset/?id=11277721641"
-			Beam1.TextureLength = -1
+			Beam1.TextureLength = 2
 			Beam1.Transparency = NumberSequence.new(0,0)
 			Beam1.Width0 = 5
 			Beam1.Width1 = 5
@@ -475,7 +475,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			Beam2.LightInfluence = 1
 			Beam2.Segments = 1
 			Beam2.Texture = "http://www.roblox.com/asset/?id=11277721641"
-			Beam2.TextureLength = -1
+			Beam2.TextureLength = 2
 			Beam2.Transparency = NumberSequence.new(0,0)
 			Beam2.Width0 = 5
 			Beam2.Width1 = 5
@@ -487,7 +487,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			Beam3.LightInfluence = 1
 			Beam3.Segments = 1
 			Beam3.Texture = "http://www.roblox.com/asset/?id=11277721641"
-			Beam3.TextureLength = -1
+			Beam3.TextureLength = 2
 			Beam3.Transparency = NumberSequence.new(0,0)
 			Beam3.Width0 = 5
 			Beam3.Width1 = 5
@@ -635,7 +635,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			Beam0.LightInfluence = 1
 			Beam0.Segments = 1
 			Beam0.Texture = "http://www.roblox.com/asset/?id=11277721641"
-			Beam0.TextureLength = -1
+			Beam0.TextureLength = 2
 			Beam0.Transparency = NumberSequence.new(0,0)
 			Beam0.Width0 = 5
 			Beam0.Width1 = 5
@@ -647,7 +647,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			Beam1.LightInfluence = 1
 			Beam1.Segments = 1
 			Beam1.Texture = "http://www.roblox.com/asset/?id=11277721641"
-			Beam1.TextureLength = -1
+			Beam1.TextureLength = 2
 			Beam1.Transparency = NumberSequence.new(0,0)
 			Beam1.Width0 = 5
 			Beam1.Width1 = 5
@@ -659,7 +659,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			Beam2.LightInfluence = 1
 			Beam2.Segments = 1
 			Beam2.Texture = "http://www.roblox.com/asset/?id=11277721641"
-			Beam2.TextureLength = -1
+			Beam2.TextureLength = 2
 			Beam2.Transparency = NumberSequence.new(0,0)
 			Beam2.Width0 = 5
 			Beam2.Width1 = 5
@@ -671,7 +671,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			Beam3.LightInfluence = 1
 			Beam3.Segments = 1
 			Beam3.Texture = "http://www.roblox.com/asset/?id=11277721641"
-			Beam3.TextureLength = -1
+			Beam3.TextureLength = 2
 			Beam3.Transparency = NumberSequence.new(0,0)
 			Beam3.Width0 = 5
 			Beam3.Width1 = 5
