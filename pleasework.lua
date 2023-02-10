@@ -429,16 +429,16 @@ event.OnServerEvent:Connect(function(player, hit)
 			
 			local Attatchment0 = Instance.new("Attachment")
 			Attatchment0.Parent = rune
-			Attatchment0.Position = Vector3.new(rune.Size.X/0.325, 0, 0)
+			Attatchment0.Position = Vector3.new(rune.Size.X*0.325, 0, 0)
 			local Attatchment1 = Instance.new("Attachment")
 			Attatchment1.Parent = rune
-			Attatchment1.Position = Vector3.new(-rune.Size.X/0.325, 0, 0)
+			Attatchment1.Position = Vector3.new(-rune.Size.X*0.325, 0, 0)
 			local Attatchment2 = Instance.new("Attachment")
 			Attatchment2.Parent = rune
-			Attatchment2.Position = Vector3.new(0, 0, rune.Size.Z/0.325)
+			Attatchment2.Position = Vector3.new(0, 0, rune.Size.Z*0.325)
 			local Attatchment3 = Instance.new("Attachment")
 			Attatchment3.Parent = rune
-			Attatchment3.Position = Vector3.new(0, 0, -rune.Size.Z/0.325)
+			Attatchment3.Position = Vector3.new(0, 0, -rune.Size.Z*0.325)
 			
 			local funny = Instance.new("Attachment")
 			funny.Parent = model.Head
