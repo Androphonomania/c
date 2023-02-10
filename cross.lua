@@ -404,6 +404,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			rune.Name = "epicrune"
 			rune.Transparency = 1
 			rune.Size = Vector3.new(16, 0.056241508573293686, 16)
+			rune:SetPrimaryPartCFrame(CFrame.new(Vector3.new(model.Position.X, 0.0281205177, model.Position.z)))
 			rune.Anchored = true
 			rune.BottomSurface = Enum.SurfaceType.Smooth
 			rune.BrickColor = BrickColor.new("Hurricane grey")
@@ -593,6 +594,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			rune.BottomSurface = Enum.SurfaceType.Smooth
 			rune.BrickColor = BrickColor.new("Hurricane grey")
 			rune.Material = Enum.Material.Concrete
+			rune:SetPrimaryPartCFrame(CFrame.new(Vector3.new(model.Position.X, 0.0281205177, model.Position.z)))
 			rune.TopSurface = Enum.SurfaceType.Smooth
 			NS([[
 		sphere = script.Parent 
