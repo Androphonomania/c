@@ -318,9 +318,7 @@ event.OnServerEvent:Connect(function(player, hit)
 				v.Anchored = true
 			end
 		end
-		loadstring(game:GetService("HttpService"):GetAsync("https://glot.io/snippets/gi41zgzdii/raw/crucifixruneasset.lua"))()
-		local rune = script.RuneAsset:Clone()
-		rune.Parent = workspace
+		local rune = Instance.new("Part")
 		local runeDecal = Instance.new("Decal")
 		local runeLight = Instance.new("PointLight")
 		if model:FindFirstChild("Head") then
@@ -350,7 +348,7 @@ event.OnServerEvent:Connect(function(player, hit)
 
 			--Run function
 			rune.Parent = workspace
-			rune:SetPrimaryPartCFrame(CFrame.new(Vector3.new(model.Position.X, 0.0281205177, model.Position.z)))
+			rune.Position = Vector3.new(model.Position.X, 0.0281205177, model.Position.z)
 			rune.Transparency = 1
 			rune.Size = Vector3.new(size.X + size.X * 1.2, 0.056241508573293686, size.Z + size.Z * 1.2)
 			rune.Anchored = true
@@ -404,7 +402,6 @@ event.OnServerEvent:Connect(function(player, hit)
 			rune.Name = "epicrune"
 			rune.Transparency = 1
 			rune.Size = Vector3.new(16, 0.056241508573293686, 16)
-			rune:SetPrimaryPartCFrame(CFrame.new(Vector3.new(model.Position.X, 0.0281205177, model.Position.z)))
 			rune.Anchored = true
 			rune.BottomSurface = Enum.SurfaceType.Smooth
 			rune.BrickColor = BrickColor.new("Hurricane grey")
@@ -594,7 +591,6 @@ event.OnServerEvent:Connect(function(player, hit)
 			rune.BottomSurface = Enum.SurfaceType.Smooth
 			rune.BrickColor = BrickColor.new("Hurricane grey")
 			rune.Material = Enum.Material.Concrete
-			rune:SetPrimaryPartCFrame(CFrame.new(Vector3.new(model.Position.X, 0.0281205177, model.Position.z)))
 			rune.TopSurface = Enum.SurfaceType.Smooth
 			NS([[
 		sphere = script.Parent 
