@@ -143,6 +143,32 @@ function getTopPart(model)
 	return highest, hm
 end
 
+local function findMiddlePosition(model)
+	local minX, minY, minZ = math.huge, math.huge, math.huge -- Set initial values for minimum coordinates
+	local maxX, maxY, maxZ = -math.huge, -math.huge, -math.huge -- Set initial values for maximum coordinates
+
+	-- Iterate through all the parts in the model
+	for _, part in pairs(model:GetDescendants()) do
+		if part:IsA("BasePart") then -- Check if the descendant is a BasePart
+			-- Get the part's coordinates
+			local x, y, z = part.Position.X, part.Position.Y, part.Position.Z
+
+			-- Update the minimum and maximum coordinates if necessary
+			if x < minX then minX = x end
+			if y < minY then minY = y end
+			if z < minZ then minZ = z end
+			if x > maxX then maxX = x end
+			if y > maxY then maxY = y end
+			if z > maxZ then maxZ = z end
+		end
+	end
+
+	-- Calculate the middle position by averaging the minimum and maximum coordinates
+	local middle = Vector3.new((minX + maxX) / 2, (minY + maxY) / 2, (minZ + maxZ) / 2)
+
+	return middle -- Return the middle position
+end
+
 function pointToMouse(mouse2)
 	local point = mouse2
 	local block = Instance.new("Part", rune)
@@ -300,11 +326,6 @@ xz_size_and_center = function(model)
 		y = size(y1),
 		z = size(z1)
 	}
-
-	--Initialize size radius value
-	output.size.r = (((output.size.x > output.size.z)
-		and (output.size.x) 
-		or (output.size.z))*math.pi/2)
 
 	--Return output as table
 	return (output)
@@ -566,10 +587,11 @@ event.OnServerEvent:Connect(function(player, hit)
 			if size.Z >= 1000 then
 				size.Z = 1000
 			end
-
+			
+			local pos = findMiddlePosition(model)
+			
 			local what = Instance.new("Part", workspace)
-			what.Position = Vector3.new(part.center.x, part.center.y, part.center.z)
-			print(part.center.y)
+			what.Position = pos
 			what.Transparency = 1
 			what.CanCollide = false
 			what.Anchored = true
