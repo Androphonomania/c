@@ -589,6 +589,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			end
 			
 			local pos = findMiddlePosition(model)
+			print(pos)
 			
 			local what = Instance.new("Part", workspace)
 			what.Position = pos
@@ -710,7 +711,7 @@ event.OnServerEvent:Connect(function(player, hit)
 					tween:Play()
 				end
 			end
-			local tween = TweenService:Create(what, man, {Position = v.Position + Vector3.new(0, (0 - height) * 1.5,0)})
+			local tween = TweenService:Create(what, man, {Position = what.Position + Vector3.new(0, (0 - height) * 1.5,0)})
 			tween:Play()
 			wait(5)
 			if game.Players:GetPlayerFromCharacter(model) then
