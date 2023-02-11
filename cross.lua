@@ -569,6 +569,7 @@ event.OnServerEvent:Connect(function(player, hit)
 
 			local what = Instance.new("Part", workspace)
 			what.Position = Vector3.new(part.center.x, part.center.y, part.center.z)
+			print(part.center.y)
 			what.Transparency = 1
 			what.CanCollide = false
 			what.Anchored = true
