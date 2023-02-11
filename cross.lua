@@ -233,10 +233,10 @@ function go()
 	light.Color = Color3.new(0,1,1)
 	light.Range = 0
 	light.Brightness = 20
-	local decal = Instance.new("Decal")
-	decal.Parent = crux
-	decal.Color3 = Color3.new(0.486275, 0.360784, 0.27451)
-	decal.Texture = "http://www.roblox.com/asset/?id=12458768717"
+	local dickal = Instance.new("Decal")
+	dickal.Parent = crux
+	dickal.Color3 = Color3.new(0.486275, 0.360784, 0.27451)
+	dickal.Texture = "http://www.roblox.com/asset/?id=12458768717"
 	owner.Character.Crucifix:Destroy()
 	
 	
@@ -265,15 +265,19 @@ function go()
 	delay(1,function()
 		local tween = TweenService:Create(crux, tweenInfohhUHHHHHHHHHHHHHUAAHAUAHA, {Color = Color3.new(0,1,1)})
 		tween:Play()
+		local tween = TweenService:Create(dickal, tweenInfohhUHHHHHHHHHHHHHUAAHAUAHA, {Color3 = Color3.new(0,1,1)})
+		tween:Play()
 	end)
-	delay(3,function()
+	delay(2.7,function()
 		local tween = TweenService:Create(light, tweenInfoGuh, {Range = 20})
 		tween:Play()
 		local tween = TweenService:Create(crux, tweenInfoGuh, {Color = Color3.new(0,1,1)})
 		tween:Play()
 	end)
-	delay(6,function()
+	delay(5.5,function()
 		local tween = TweenService:Create(crux, tweenInfoWhat, {Transparency = 1})
+		tween:Play()
+		local tween = TweenService:Create(dickal, tweenInfoWhat, {Transparency = 1})
 		tween:Play()
 		local tween = TweenService:Create(mes, tweenInfoWhat, {Scale = Vector3.new(0.009,0.009,0.009)})
 		tween:Play()
@@ -366,14 +370,14 @@ event.OnServerEvent:Connect(function(player, hit)
 			size = model.Size
 
 			local prepare = Instance.new("Sound", model)
-			prepare.SoundId = "http://www.roblox.com/asset/?id=12370314789"
+			prepare.SoundId = "http://www.roblox.com/asset/?id=12456397841"
 			prepare.Volume = 1
 			prepare:Play()
 			
 			delay(1, function()
 				local balls = Instance.new("Sound", rune)
 				balls.SoundId = "http://www.roblox.com/asset/?id=6531010123"
-				balls.Volume = 1
+				balls.Volume = 0.5
 				balls.Pitch = 0.2
 				balls:Play()
 			end)
@@ -525,14 +529,14 @@ event.OnServerEvent:Connect(function(player, hit)
 			Beam3.Width1 = 5
 
 			local prepare = Instance.new("Sound", rune)
-			prepare.SoundId = "http://www.roblox.com/asset/?id=12370314789"
+			prepare.SoundId = "http://www.roblox.com/asset/?id=12456397841"
 			prepare.Volume = 1
 			prepare:Play()
 			
 			delay(1, function()
 				local balls = Instance.new("Sound", rune)
 				balls.SoundId = "http://www.roblox.com/asset/?id=6531010123"
-				balls.Volume = 1
+				balls.Volume = 0.5
 				balls.Pitch = 0.2
 				balls:Play()
 			end)
@@ -607,14 +611,14 @@ event.OnServerEvent:Connect(function(player, hit)
 			what.Anchored = true
 
 			local prepare = Instance.new("Sound", what)
-			prepare.SoundId = "http://www.roblox.com/asset/?id=12370314789"
+			prepare.SoundId = "http://www.roblox.com/asset/?id=12456397841"
 			prepare.Volume = 1
 			prepare:Play()
 			
 			delay(1, function()
 				local balls = Instance.new("Sound", what)
 				balls.SoundId = "http://www.roblox.com/asset/?id=6531010123"
-				balls.Volume = 1
+				balls.Volume = 0.5
 				balls.Pitch = 0.2
 				balls:Play()
 			end)
