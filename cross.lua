@@ -273,15 +273,16 @@ xz_size_and_center = function(model)
 	-- Declare output variable
 	output = {
 		size = {x = 0, z = 0, r = 0},
-		center = {x = 0, z = 0}
+		center = {x = 0, y = 0, z = 0}
 	}
 
 	--Declare function variables
-	x1, z1 = {}, {}
+	x1, y1, z1 = {}, {}, {}
 
 	for i,v in pairs(model:GetDescendants()) do
 		if (v:IsA("BasePart")) then
 			tableinsert(x1,v.Position.X)
+			tableinsert(y1,v.Position.Y)
 			tableinsert(z1,v.Position.Z)
 		end
 	end
@@ -289,12 +290,14 @@ xz_size_and_center = function(model)
 	--Initialize center values
 	output.center = {
 		x = middle(x1),
+		y = middle(y1),
 		z = middle(z1)
 	}
 
 	--Initialize size values
 	output.size = {
 		x = size(x1),
+		y = size(y1),
 		z = size(z1)
 	}
 
@@ -565,7 +568,7 @@ event.OnServerEvent:Connect(function(player, hit)
 			end
 
 			local what = Instance.new("Part", workspace)
-			what.Position = Vector3.new(part.center.x, 0.0281205177, part.center.z)
+			what.Position = Vector3.new(part.center.x, part.center.y, part.center.z)
 			what.Transparency = 1
 			what.CanCollide = false
 			what.Anchored = true
