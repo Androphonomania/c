@@ -92,7 +92,11 @@ handle.Material = Enum.Material.Wood
 mesh.Name = "Mesh"
 mesh.Parent = handle
 mesh.MeshId = "rbxassetid://11497952294"
-mesh.TextureId = "rbxassetid://12458768754"
+local decal = Instance.new("Decal")
+decal.Parent = handle
+decal.Color3 = Color3.new(0.486275, 0.360784, 0.27451)
+decal.Texture = "http://www.roblox.com/asset/?id=12458768717"
+
 local scale = 0.003
 mesh.Scale = Vector3.new(scale,scale,scale)
 
@@ -212,7 +216,7 @@ function go()
 	local crux = Instance.new("Part")
 	crux.Name = "Handle"
 	crux.Size = Vector3.new(0.1848578155040741, 1.8600000143051147, 1.5199999809265137)
-	crux.Color = Color3.new(0.486275,0.360784,0.27451)
+	crux.Color = Color3.new(0.486275, 0.360784, 0.27451)
 	crux.Material = Enum.Material.Wood
 	local mes = Instance.new("SpecialMesh")
 	mes.Name = "Mesh"
@@ -229,6 +233,10 @@ function go()
 	light.Color = Color3.new(0,1,1)
 	light.Range = 0
 	light.Brightness = 20
+	local decal = Instance.new("Decal")
+	decal.Parent = crux
+	decal.Color3 = Color3.new(0.486275, 0.360784, 0.27451)
+	decal.Texture = "http://www.roblox.com/asset/?id=12458768717"
 	owner.Character.Crucifix:Destroy()
 	
 	
