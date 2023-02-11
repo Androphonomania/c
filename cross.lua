@@ -563,6 +563,8 @@ event.OnServerEvent:Connect(function(player, hit)
 			rune:Destroy()
 			stana:Destroy()
 		else
+			pos = findMiddlePosition(model)
+			print(pos)
 			if model:IsA("Tool") then
 				size = model.Handle.Size
 			elseif model:IsA("BasePart") then
@@ -588,8 +590,7 @@ event.OnServerEvent:Connect(function(player, hit)
 				size.Z = 1000
 			end
 			
-			local pos = findMiddlePosition(model)
-			print(pos)
+			
 			
 			local what = Instance.new("Part", workspace)
 			what.Position = pos
