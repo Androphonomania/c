@@ -92,7 +92,7 @@ handle.Material = Enum.Material.Wood
 mesh.Name = "Mesh"
 mesh.Parent = handle
 mesh.MeshId = "rbxassetid://11497952294"
-mesh.TextureId = "rbxassetid://1054805399"
+mesh.TextureId = "rbxassetid://12458768754"
 local scale = 0.003
 mesh.Scale = Vector3.new(scale,scale,scale)
 
